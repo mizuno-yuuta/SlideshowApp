@@ -12,18 +12,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="978-RN-zTf">
-                                <rect key="frame" x="317" y="732" width="31" height="30"/>
+                                <rect key="frame" x="317" y="786" width="31" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="switchButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tl5-xM-UNH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ0-zw-FYa">
-                                <rect key="frame" x="54" y="732" width="30" height="30"/>
+                                <rect key="frame" x="54" y="786" width="30" height="30"/>
                                 <state key="normal" title="次"/>
                                 <connections>
                                     <action selector="nextButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mor-Y4-EvZ"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-Pb-p9l">
-                                <rect key="frame" x="191.5" y="732" width="31" height="30"/>
+                                <rect key="frame" x="191.5" y="786" width="31" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HZs-ZB-irh"/>
                                 </constraints>
@@ -72,7 +72,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bdA-Lh-5JI">
                     <connections>
-                        <action selector="画面タップ:" destination="BYZ-38-t0r" id="lS6-eu-bOG"/>
+                        <action selector="exit:" destination="BYZ-38-t0r" id="Vqq-ix-atB"/>
                         <segue destination="gNR-ZR-GWM" kind="show" id="ehH-gx-80N"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -94,8 +94,7 @@
                                 </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="戻るボタン:" destination="gNR-ZR-GWM" eventType="touchUpInside" id="3eq-rP-JB0"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ab8-VO-i9L"/>
+                                    <segue destination="Mzp-8n-tRB" kind="unwind" unwindAction="exit:" id="nUV-6W-I3E"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66K-I9-eUj">
@@ -116,10 +115,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="plR-F3-pnm"/>
                     <connections>
-                        <outlet property="image" destination="66K-I9-eUj" id="7KE-re-7v2"/>
+                        <outlet property="image" destination="66K-I9-eUj" id="tbS-wl-X50"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SP-F6-ecb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Mzp-8n-tRB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="895.6521739130435" y="117.85714285714285"/>
         </scene>

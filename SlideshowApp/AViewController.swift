@@ -12,8 +12,6 @@ class AViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
 
-    @IBAction func 戻るボタン(_ sender: UIButton) {
-    }
     var imagedate : UIImage!
    
      override func viewDidLoad() {
