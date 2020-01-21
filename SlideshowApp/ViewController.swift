@@ -40,94 +40,99 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextButtonTap(_ sender: Any) {
-        if displayImageNo < imageNameArray.count - 1 {
-           
-            displayImageNo += 1
-            
-            displayImage()
-        } else {
-            displayImageNo = 0
-            displayImage()
-            
-        }
-    }
-    @IBAction func backButtonTap(_ sender: Any) {
-        if displayImageNo  >= 1 && displayImageNo  <= imageNameArray.count - 1  {
-                   
-                   displayImageNo -= 1
-                   
-                   displayImage()
-               }  else {
-                   displayImageNo = imageNameArray.count - 1
-                   displayImage()
-               }
-    
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:
-    #selector(updateTimer(_:)), userInfo: nil, repeats: true)
-    }
-        
-           @objc func updateTimer(_ timer: Timer) {
-              
-               if displayImageNo < imageNameArray.count - 1 {
+         if displayImageNo < imageNameArray.count - 1 {
                   
-                   displayImageNo += 1
-                   
-                   displayImage()
-               } else {
-                   displayImageNo = 0
-                   displayImage()
-               }
-           }
+                  displayImageNo += 1
+                 
+                  displayImage()
+        } else {
+                  displayImageNo = 0
+                  displayImage()
+              }
+          }
+          
+    @IBAction func backButtonTop(_ sender: Any) {
+        if  displayImageNo  >= 1 && displayImageNo  <= imageNameArray.count - 1  {
+                           displayImageNo -= 1
+            displayImage()
+                     } else {
+                              displayImageNo = imageNameArray.count - 1
+                              displayImage()
+        }}
+    
     @IBAction func switchButtonTap(_ sender: Any) {
         
+  
                 if self.timer == nil {
                     
                     self.timer = Timer.scheduledTimer(timeInterval: 2.0,
                    target: self, selector:
-                #selector (updateTimer(_:)), userInfo: nil, repeats: true)
+                        #selector(updateTimer(_:)), userInfo: nil, repeats: true)
                    
                     次.isEnabled = false
-                    戻る.isEnabled = false
+                   戻る.isEnabled = false
                     
                     再生.setTitle("停止", for: .normal)
-                   
+                 
                     self.view.backgroundColor = UIColor.lightGray
                     再生.titleLabel?.font =
                     UIFont.systemFont(ofSize: 25)
                     
                 } else if self.timer != nil {
-                   
+                    
                     self.timer.invalidate()
-                   
+                    
                     self.timer = nil
                    
-                  次.isEnabled = true
+                    次.isEnabled = true
                     戻る.isEnabled = true
-                   
-                    再生.setTitle("再生", for: .normal)
                     
+                    再生.setTitle("再生", for: .normal)
+                   
                     self.view.backgroundColor = UIColor.white
                     再生.titleLabel?.font =
                     UIFont.systemFont(ofSize: 20)
                 }
+            }
+
+                
+                @objc func updateTimer(_ timer: Timer) {
+                    
+                    if displayImageNo < imageNameArray.count - 1 {
+                        
+                        displayImageNo += 1
+                        
+                        displayImage()
+                        print(displayImageNo)
+                    } else {
+                        displayImageNo = 0
+                        displayImage()
+                        print(displayImageNo) 
+                    }
+                }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+             let aViewController:AViewController = segue.destination as! AViewController
+       aViewController.self.imagedate = imageView.image
+
+         }
+
+    @IBAction func 画面タップ(_ sender: Any) {
+    }
+    override func didReceiveMemoryWarning() {
+             super.didReceiveMemoryWarning()
+       }
+    
+    @IBAction func exit(_ sender: UIStoryboardSegue) {
     }
     
-    @IBAction func 画面タップ(_ sender: AnyObject) {
-      
-    }
-    
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-          let aViewController:AViewController = segue.destination as! AViewController
-    aViewController.self.imagedate = imageView.image
-
-      }
-
-      override func didReceiveMemoryWarning() {
-          super.didReceiveMemoryWarning()
-    }
- 
-    @IBAction func exit(_ sender:  UIStoryboardSegue) {
-    }
 }
+                 
+    
+
+
+
+
 

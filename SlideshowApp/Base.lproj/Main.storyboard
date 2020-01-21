@@ -15,23 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="978-RN-zTf">
-                                <rect key="frame" x="317" y="786" width="31" height="30"/>
-                                <state key="normal" title="再生"/>
-                                <connections>
-                                    <action selector="switchButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tl5-xM-UNH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJ0-zw-FYa">
-                                <rect key="frame" x="54" y="786" width="30" height="30"/>
-                                <state key="normal" title="次"/>
+                                <rect key="frame" x="54" y="786" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="o0u-Xb-quJ"/>
+                                </constraints>
+                                <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mor-Y4-EvZ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-LD-Z6m">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-LD-Z6m">
                                 <rect key="frame" x="14" y="204" width="380" height="188"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="eOa-bp-rvd"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bdA-Lh-5JI" appends="YES" id="JV2-lX-07o"/>
                                 </connections>
@@ -43,21 +42,38 @@
                                 </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <action selector="backButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nPa-rF-Eh2"/>
+                                    <action selector="backButtonTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7k-M6-LcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="978-RN-zTf">
+                                <rect key="frame" x="283" y="786" width="100.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wr1-I6-Bi6"/>
+                                </constraints>
+                                <state key="normal" title="再生/停止"/>
+                                <connections>
+                                    <action selector="exit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCJ-Vx-HID"/>
+                                    <action selector="switchButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bN5-6H-gbq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="9Ha-Pb-p9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0CY-l4-YMF"/>
-                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0vA-UD-QBD"/>
-                            <constraint firstItem="978-RN-zTf" firstAttribute="leading" secondItem="9Ha-Pb-p9l" secondAttribute="trailing" constant="94.5" id="61C-GV-ZaG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJ0-zw-FYa" secondAttribute="bottom" constant="46" id="728-zb-343"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="978-RN-zTf" secondAttribute="trailing" constant="66" id="UH0-Am-eHm"/>
-                            <constraint firstItem="pJ0-zw-FYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="eU9-Rb-51Y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ha-Pb-p9l" secondAttribute="bottom" constant="46" id="ghh-kn-KzW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="978-RN-zTf" secondAttribute="bottom" constant="46" id="pMT-IN-W6M"/>
-                            <constraint firstItem="9Ha-Pb-p9l" firstAttribute="leading" secondItem="pJ0-zw-FYa" secondAttribute="trailing" constant="107.5" id="wVO-b5-cTp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="978-RN-zTf" secondAttribute="trailing" constant="30" id="Hmz-tF-SZu"/>
+                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="Hpg-2y-wxw"/>
+                            <constraint firstItem="978-RN-zTf" firstAttribute="leading" secondItem="9Ha-Pb-p9l" secondAttribute="trailing" constant="61" id="Vti-nn-hL9"/>
+                            <constraint firstItem="978-RN-zTf" firstAttribute="top" secondItem="7gL-LD-Z6m" secondAttribute="bottom" constant="394" id="Zwx-fu-2Aj"/>
+                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="bZl-fD-XAO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ha-Pb-p9l" secondAttribute="bottom" constant="46" id="deQ-nS-p2s"/>
+                            <constraint firstItem="9Ha-Pb-p9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzv-fe-FBL"/>
+                            <constraint firstItem="978-RN-zTf" firstAttribute="leading" secondItem="9Ha-Pb-p9l" secondAttribute="trailing" constant="61" id="h94-VP-Kkb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJ0-zw-FYa" secondAttribute="bottom" constant="46" id="hPv-BF-O1C"/>
+                            <constraint firstItem="pJ0-zw-FYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="iqJ-0C-Dy0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="978-RN-zTf" secondAttribute="bottom" constant="46" id="meK-xH-26h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gL-LD-Z6m" secondAttribute="trailing" constant="20" id="psR-3B-VRv"/>
+                            <constraint firstItem="9Ha-Pb-p9l" firstAttribute="leading" secondItem="pJ0-zw-FYa" secondAttribute="trailing" constant="106.5" id="rZh-3B-F1H"/>
+                            <constraint firstItem="9Ha-Pb-p9l" firstAttribute="top" secondItem="7gL-LD-Z6m" secondAttribute="bottom" constant="394" id="uKg-qs-rHx"/>
+                            <constraint firstItem="pJ0-zw-FYa" firstAttribute="top" secondItem="7gL-LD-Z6m" secondAttribute="bottom" constant="394" id="uzm-1T-Lv7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -72,7 +88,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="bdA-Lh-5JI">
                     <connections>
-                        <action selector="exit:" destination="BYZ-38-t0r" id="Vqq-ix-atB"/>
+                        <action selector="画面タップ:" destination="BYZ-38-t0r" id="aau-rS-WJk"/>
                         <segue destination="gNR-ZR-GWM" kind="show" id="ehH-gx-80N"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -94,7 +110,7 @@
                                 </constraints>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="Mzp-8n-tRB" kind="unwind" unwindAction="exit:" id="nUV-6W-I3E"/>
+                                    <segue destination="Mzp-8n-tRB" kind="unwind" unwindAction="exit:" id="yPO-Wk-UwL"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66K-I9-eUj">
