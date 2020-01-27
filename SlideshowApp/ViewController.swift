@@ -53,32 +53,28 @@ class ViewController: UIViewController {
         }}
     
     @IBAction func switchButtonTap(_ sender: Any) {
-        if self.timer == nil {
-            self.timer = Timer.scheduledTimer(
-                timeInterval: 2.0,
-                target: self,
-                selector:#selector(updateTimer(_:)),
-                userInfo: nil,
-                repeats: true
-            )
-            次.isEnabled = false
-            戻る.isEnabled = false
-            再生.setTitle("停止", for: .normal)
-            self.view.backgroundColor = UIColor.lightGray
-            再生.titleLabel?.font = UIFont.systemFont(ofSize: 25)
-        } else if self.timer != nil {
-            self.timer.invalidate()
-            self.timer = nil
-            次.isEnabled = true
-            戻る.isEnabled = true
-            
-            再生.setTitle("再生", for: .normal)
-           
-            self.view.backgroundColor = UIColor.white
-            再生.titleLabel?.font =
-            UIFont.systemFont(ofSize: 20)
-        }
-    }
+       if self.timer == nil {
+                   self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+                   //ボタンを停止ボタンに変更する
+                   let button = sender as! UIButton
+                   button.setTitle("停止", for: .normal)
+                   //進むボタンをタップ不可にする
+                   次.isEnabled = false
+                   //停止ボタンをタップ不可にする
+                   戻る.isEnabled = false
+               } else {
+                   //値があればタイマー停止
+                   self.timer.invalidate() //タイマーを停止
+                   self.timer = nil
+                   let button = sender as! UIButton
+                   button.setTitle("再生", for: .normal)
+                   //進むボタンをタップ可能にする
+                   次.isEnabled = true
+                   //停止ボタンをタップ可能にする
+                   戻る.isEnabled = true
+               }
+           }
+
 
     @objc func updateTimer(_ timer: Timer) {
         if (displayImageNo < imageNameArray.count - 1) {
@@ -98,6 +94,9 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
+            次.isEnabled = true
+            戻る.isEnabled = true
+
     }
 
    

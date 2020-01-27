@@ -38,11 +38,8 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-LD-Z6m">
-                                <rect key="frame" x="20" y="123" width="335" height="106"/>
+                                <rect key="frame" x="0.0" y="123" width="375" height="118"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="h8n-V9-YXy"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bdA-Lh-5JI" appends="YES" id="JV2-lX-07o"/>
                                 </connections>
@@ -51,17 +48,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="978-RN-zTf" firstAttribute="leading" secondItem="9Ha-Pb-p9l" secondAttribute="trailing" constant="61" id="1cZ-bi-n9x"/>
-                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ge-fZ-WOJ"/>
                             <constraint firstItem="978-RN-zTf" firstAttribute="leading" secondItem="9Ha-Pb-p9l" secondAttribute="trailing" constant="61" id="OFC-uW-NZr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gL-LD-Z6m" secondAttribute="trailing" id="XBl-Uk-qAw"/>
                             <constraint firstItem="9Ha-Pb-p9l" firstAttribute="leading" secondItem="pJ0-zw-FYa" secondAttribute="trailing" constant="106.67" id="aue-P9-Byb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="978-RN-zTf" secondAttribute="bottom" constant="46" id="c7O-KC-YCo"/>
+                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fuq-mL-Ddb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="978-RN-zTf" secondAttribute="trailing" constant="64.329999999999998" id="h9y-qf-b5t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pJ0-zw-FYa" secondAttribute="bottom" constant="46" id="iyg-Ak-tyi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ha-Pb-p9l" secondAttribute="bottom" constant="46" id="jRk-gp-t6a"/>
-                            <constraint firstItem="7gL-LD-Z6m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jSm-bD-Emx"/>
                             <constraint firstItem="pJ0-zw-FYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="paX-0X-StU"/>
                             <constraint firstItem="9Ha-Pb-p9l" firstAttribute="leading" secondItem="pJ0-zw-FYa" secondAttribute="trailing" constant="106.67" id="vP8-C2-cKL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7gL-LD-Z6m" secondAttribute="trailing" constant="20" id="vfd-98-1l5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
