@@ -67,7 +67,7 @@
                     <navigationItem key="navigationItem" id="eyC-wQ-aV4"/>
                     <connections>
                         <outlet property="imageView" destination="7gL-LD-Z6m" id="54L-l2-LHP"/>
-                        <outlet property="再生" destination="978-RN-zTf" id="h9B-PJ-oPs"/>
+                        <outlet property="saiseiButton" destination="978-RN-zTf" id="NhK-HF-1Qz"/>
                         <outlet property="戻る" destination="9Ha-Pb-p9l" id="P2R-qf-S27"/>
                         <outlet property="次" destination="pJ0-zw-FYa" id="VIt-1O-ozA"/>
                     </connections>
@@ -91,10 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9c-BR-4zF">
-                                <rect key="frame" x="184" y="587" width="7" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="is9-z2-CcM"/>
-                                </constraints>
+                                <rect key="frame" x="172" y="587" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="Mzp-8n-tRB" kind="unwind" unwindAction="exit:" id="yPO-Wk-UwL"/>
@@ -109,9 +106,8 @@
                             <constraint firstItem="qfC-Hy-sVg" firstAttribute="trailing" secondItem="66K-I9-eUj" secondAttribute="trailing" id="6Cb-fH-51y"/>
                             <constraint firstItem="66K-I9-eUj" firstAttribute="leading" secondItem="qfC-Hy-sVg" secondAttribute="leading" id="9xW-BX-87m"/>
                             <constraint firstItem="66K-I9-eUj" firstAttribute="top" secondItem="qfC-Hy-sVg" secondAttribute="top" id="Icc-HV-5Gf"/>
-                            <constraint firstItem="qfC-Hy-sVg" firstAttribute="bottom" secondItem="i9c-BR-4zF" secondAttribute="bottom" constant="30" id="MRb-wn-lBc"/>
-                            <constraint firstItem="qfC-Hy-sVg" firstAttribute="trailing" secondItem="i9c-BR-4zF" secondAttribute="trailing" constant="184" id="OZF-dW-Pci"/>
-                            <constraint firstItem="i9c-BR-4zF" firstAttribute="leading" secondItem="qfC-Hy-sVg" secondAttribute="leading" constant="184" id="ZdD-if-Fa4"/>
+                            <constraint firstItem="i9c-BR-4zF" firstAttribute="centerX" secondItem="hrp-Zt-OaX" secondAttribute="centerX" id="fzu-yz-PgW"/>
+                            <constraint firstItem="qfC-Hy-sVg" firstAttribute="bottom" secondItem="i9c-BR-4zF" secondAttribute="bottom" constant="30" id="p1u-Sg-Fzl"/>
                             <constraint firstAttribute="bottom" secondItem="66K-I9-eUj" secondAttribute="bottom" id="pRQ-ua-NlD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfC-Hy-sVg"/>

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var 次: UIButton!
     @IBOutlet weak var 戻る: UIButton!
-    @IBOutlet weak var 再生: UIButton!
+    @IBOutlet weak var saiseiButton: UIButton!
     var timer : Timer!
 
     override func viewDidLoad() {
@@ -40,8 +40,8 @@ class ViewController: UIViewController {
          } else {
                   displayImageNo = 0
                   displayImage()
-              }
-          }
+         }
+    }
           
     @IBAction func backButtonTop(_ sender: Any) {
         if  displayImageNo  >= 1 && displayImageNo  <= imageNameArray.count - 1  {
@@ -50,7 +50,9 @@ class ViewController: UIViewController {
         }else {
             displayImageNo = imageNameArray.count - 1
             displayImage()
-        }}
+        }
+        
+    }
     
     @IBAction func switchButtonTap(_ sender: Any) {
        if self.timer == nil {
@@ -94,6 +96,7 @@ class ViewController: UIViewController {
         if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
+            self.saiseiButton.setTitle("再生", for: .normal)
             次.isEnabled = true
             戻る.isEnabled = true
 
@@ -107,6 +110,7 @@ class ViewController: UIViewController {
     @IBAction func exit(_ sender: UIStoryboardSegue) {
     }
     @IBAction func 画面タップ(_ sender: Any) {
+        
     }
 }
 
